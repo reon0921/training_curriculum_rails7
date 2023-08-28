@@ -28,7 +28,7 @@ class CalendarsController < ApplicationController
 
     @week_days = []
 
-    plans = paramslan.where(date: @todays_date..@todays_date + 6)
+    plans = Plan.where(date: @todays_date..@todays_date + 6)
 
     7.times do |x|
       today_plans = []
